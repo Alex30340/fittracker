@@ -1,0 +1,26 @@
+# FitTracker × ProteinScan — Backend Dependencies
+
+# Web framework
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# Auth
+python-jose[cryptography]==3.3.0
+bcrypt==4.2.0
+
+# Database (identique à ton setup Streamlit)
+psycopg2-binary==2.9.9
+
+# Data validation
+pydantic[email]==2.9.2
+
+# CORS déjà inclus dans FastAPI
+
+# --- Modules existants (déjà dans ton projet) ---
+# requests, beautifulsoup4, etc. pour scraper.py
+requests==2.32.3
+beautifulsoup4==4.12.3
+lxml==5.3.0
+
+# Pour browser_scraper.py si besoin
+# playwright==1.47.0
