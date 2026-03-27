@@ -16,7 +16,7 @@ export default function FitLayout({ children }: { children: React.ReactNode }) {
   const { user, logout } = useAuth();
 
   return (
-    <div className="flex min-h-screen">
+    <div className="theme-dark flex min-h-screen" style={{ background: "#0c1017", color: "#e8eaf0" }}>
       {/* Sidebar */}
       <aside className="w-[200px] h-screen flex flex-col border-r border-white/[0.04] bg-[#0a0d14] flex-shrink-0 sticky top-0">
         <Link href="/" className="flex items-center gap-2 px-5 h-14 border-b border-white/[0.04]">
