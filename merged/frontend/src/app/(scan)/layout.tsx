@@ -14,7 +14,7 @@ export default function ScanLayout({ children }: { children: React.ReactNode }) 
   const { user, logout } = useAuth();
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="theme-dark min-h-screen flex flex-col" style={{ background: "#0c1017", color: "#e8eaf0" }}>
       {/* Top nav */}
       <nav className="flex items-center justify-between px-6 lg:px-10 h-14 border-b border-white/[0.04] bg-[#0c1017]/80 backdrop-blur-md sticky top-0 z-50">
         <div className="flex items-center gap-8">
