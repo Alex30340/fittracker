@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap");
+
+:root {
+  --bg: #0c1017;
+  --bg-card: #141921;
+  --bg-hover: #1a2030;
+  --bg-input: #181e2a;
+  --border: rgba(255,255,255,0.06);
+  --text: #e8eaf0;
+  --text-sec: #7d8599;
+  --text-dim: #4a5168;
+  --green: #22c55e;
+  --blue: #3b82f6;
+  --amber: #f59e0b;
+  --red: #ef4444;
+}
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.55;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.07); border-radius: 10px; }
+
+a { text-decoration: none; color: inherit; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.anim-up { animation: fadeUp 0.5s cubic-bezier(0.25,1,0.5,1) both; }
+.anim-in { animation: fadeIn 0.4s ease both; }
+
+.stagger > * { opacity:0; animation: fadeUp 0.45s cubic-bezier(0.25,1,0.5,1) both; }
+.stagger > *:nth-child(1) { animation-delay:0.03s; }
+.stagger > *:nth-child(2) { animation-delay:0.06s; }
+.stagger > *:nth-child(3) { animation-delay:0.09s; }
+.stagger > *:nth-child(4) { animation-delay:0.12s; }
+.stagger > *:nth-child(5) { animation-delay:0.15s; }
+.stagger > *:nth-child(6) { animation-delay:0.18s; }
+.stagger > *:nth-child(7) { animation-delay:0.21s; }
+.stagger > *:nth-child(8) { animation-delay:0.24s; }
+.stagger > *:nth-child(9) { animation-delay:0.27s; }
+.stagger > *:nth-child(n+10) { animation-delay:0.3s; }
+
+.score-bar { height: 7px; border-radius: 99px; background: rgba(255,255,255,0.04); overflow: hidden; }
+.score-bar-fill { height:100%; border-radius: 99px; transition: width 0.8s cubic-bezier(0.25,1,0.5,1); }
+
+.hover-row { transition: background 0.15s ease; }
+.hover-row:hover { background: var(--bg-hover); }
